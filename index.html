@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather application</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Amarante&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="loader">Loading...</div>
+    <div class="weather-box">
+        <!-- navbar elements here -->
+        <div class="weather-navbar">
+            <div class="current-location">
+                <i class="fa-duotone fa-solid fa-map-pin"></i>
+                <p>Bikaner, Rajstham</p>
+            </div>
+            <div class="container">
+                <input checked="" class="checkbox" type="checkbox">
+                <div class="mainbox">
+                    <div class="iconContainer">
+                        <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                            </path>
+                        </svg>
+                    </div>
+                    <input class="search_input" placeholder="search city" type="text" id="search-weather"
+                        autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+
+            <div class="toggle-mode">
+                <input type="checkbox" class="theme-checkbox">
+            </div>
+
+        </div>
+        <!-- navabr elements end here -->
+
+        <div class="hero-section">
+
+            <!-- navigator -->
+            <div class="days-navigator">
+                <a href="#" class="today" id="today">Today</a>
+                <a href="#" class="" id="yesterday">Yesterday</a>
+                <a href="#" class="" id="nextdays">Next 7 days</a>
+            </div>
+            <!-- start here for real content of page -->
+            <div class="today-weather">
+                <div class="currentdate-weather">
+                    <div class="main-info">
+                        <div class="main-info-weather">
+
+                            <h1>23 <sup>℃</sup></h1>
+                            <p id="weather-condition">Thunder</p>
+                        </div>
+                        <img src="./weather_icones/animated/wind.svg" alt="Weather-icone">
+                    </div>
+                    <div class="weather-info">
+                        <div class="infoone info">
+                            <img src="./weather_icones/animated/wind.svg" alt="weather-icone">
+                            <h4>9Km/h</h4>
+                            <p>Wind</p>
+                        </div>
+                        <div class="infotwo info">
+                            <img src="./weather_icones/animated/heating.svg" alt="weather-icone">
+                            <h4>17%</h4>
+                            <p>HeatIndex</p>
+                        </div>
+                        <div class="infothree info">
+                            <img src="./weather_icones/animated/humidity.svg" alt="weather-icone">
+                            <h4>39%</h4>
+                            <p>Humidity</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-cards">
+                <div id="Cardone" class="cards">
+
+                    <div class="day">sunday </div>
+                    <div class="innercard">
+                        <h2>25°C</h2>
+                        <img src="./weather_icones/animated/wind.svg" alt="">
+                        <p>Rainy Day</p>
+                    </div>
+                </div>
+                <div id="Cardtwo" class="cards">
+                    <div class="day">Monday</div>
+                    <div class="innercard">
+                        <h2>23°C</h2>
+                        <img src="./weather_icones/animated/wind.svg" alt="">
+                        <p>Rainy Day </p>
+                    </div>
+                </div>
+                <div id="Cardthree" class="cards">
+                    <div class="day">Monday</div>
+                    <div class="innercard">
+                        <h2>24°C</h2>
+                        <img src="./weather_icones/animated/snowy-3.svg" alt="">
+                        <p>Rainy Day</p>
+                    </div>
+                </div>
+                <div id="Cardfour" class="cards">
+                    <div class="day">Monday</div>
+                    <div class="innercard">
+                        <h2>28°C</h2>
+                        <img src="./weather_icones/animated/snowy-6.svg" alt="">
+                        <p>Rainy Day</p>
+                    </div>
+                </div>
+                <div id="Cardfive" class="cards">
+                    <div class="day">Monday</div>
+                    <div class="innercard">
+                        <h2>27°C</h2>
+                        <img src="./weather_icones/animated/rain.svg" alt="">
+                        <p>Rainy Day</p>
+                    </div>
+                </div>
+            </div>
+
+            <section id="yesterday-weather-info">
+                <div class="time-date-section">
+                    <div class="date-section time-date">
+                        <p>2024-08-08</p>
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <img src="./weather_icones/static/day.svg" alt="sun-icone" id="sun-icone">
+
+                </div>
+                <div class="yesterday-forcast">
+                    <div class="yes-card">
+
+                        <div class="wind common">
+                            <p>wind speed</p>
+                            <img src="./weather_icones/animated/wind.svg" alt="wind-icone">
+                            <h3>12km/h</h3>
+                        </div>
+                        <div class="condition common">
+                            <p>Condition</p>
+                            <img src="./weather_icones/animated/hail.svg" alt="wind-icone">
+                            <h3>720 hpa</h3>
+                        </div>
+                        <div class="uvindex common">
+                            <p>UV Index</p>
+                            <img src="./weather_icones/animated/clear-day.svg" alt="wind-icone">
+                            <h3>2</h3>
+                        </div>
+                        <div class="temp common">
+                            <p>Temp</p>
+                            <img src="./weather_icones/animated/heating.svg" alt="wind-icone">
+                            <h3>23</h3>
+                        </div>
+                    </div>
+
+                    <div class="right-side-info">
+
+                        <img src="./weather_icones/animated/drizzle.svg" alt="weather-icon" class="weather-img">
+
+                        <div class="scroll-yes-info">
+                            <div class="scroll-common scroll-one">
+                                <p>Humidity</p>
+                                <img src="./weather_icones/animated/humidity.svg" alt="weather-icon">
+                                <p>12</p>
+                            </div>
+                            <div class="scroll-common scroll-two">
+                                <p>Temp</p>
+                                <img src="./weather_icones/animated/thermometer-celsius.svg" alt="weather-icon">
+                                <p>12°C</p>
+                            </div>
+                            <div class="scroll-common scroll-three">
+                                <p>Wind-kph</p>
+                                <img src="./weather_icones/animated/wind.svg" alt="weather-icon">
+                                <p>12</p>
+                            </div>
+
+                            <div class="scroll-common scroll-four">
+                                <p>Colud</p>
+                                <img src="./weather_icones/animated/cloudy.svg" alt="weather-icon">
+                                <p>12</p>
+                            </div>
+                            <div class="scroll-common scroll-five">
+                                <p>Wind Direction</p>
+                                <img src="./weather_icones/animated/windsock.svg" alt="weather-icon">
+                                <p>12%</p>
+                            </div>
+                            <div class="scroll-common scroll-six">
+                                <p>Heat Index</p>
+                                <img src="./weather_icones/animated/heat-index.svg" alt="weather-icon">
+                                <p>37°C</p>
+                            </div>
+                            <div class="scroll-common scroll-seven">
+                                <p>UV</p>
+                                <img src="./weather_icones/animated/uv-index.svg" alt="weather-icon">
+                                <p>0</p>
+                            </div>
+                            <div class="scroll-common scroll-eight">
+                                <p>Wind Chill</p>
+                                <img src="./weather_icones/animated/windchill.svg" alt="weather-icon">
+                                <p>12°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="weather_application.js"></script>
+
+</html>
