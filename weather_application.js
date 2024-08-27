@@ -1,5 +1,5 @@
-const APIKEYONE = 'f8cd0bbcaa6c4e60b2d100601240408&q';
-const APIKEYTWO = '9260194f1530d40b963654f278347529';
+const APIKEYONE = 'cd0bbcaa6c4e60b2d100601240408;
+const APIKEYTWO = '60194f1530d40b963654f278347529'; // this api key not work because I disactive both API keys
 const historyapi = "http://api.weatherapi.com/v1/history.json?key=f8cd0bbcaa6c4e60b2d100601240408&q=London&dt=2024-08-20";
 const Setlocation = document.querySelector('.current-location>p')
 const toggleMode = document.querySelector('.theme-checkbox');
